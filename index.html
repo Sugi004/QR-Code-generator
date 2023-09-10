@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>QR Code Generator</title>
+    <link href="./download.png" rel="icon" type="fa-icon" />
+
+    <link rel="stylesheet" href="index.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css"
+    />
+  </head>
+  <body>
+    <script src="./index.js"></script>
+
+    <h1>QR Code Generator</h1>
+    <div class="container">
+      <div class="content-wrapper">
+        <label for="text">Enter the Data</label>
+        <input type="text" id="data" />
+      <div class="size-wrapper">
+        <label for="width">Width</label>
+          <input type="number" id="width" placeholder="0"/>
+        <label for="height">Height</label>
+          <input type="number" id="height" placeholder="0"/><br />
+          <div class="color-wrapper"> 
+              <label for="qr-color">QR Color</label>
+              <input type="color" id="qrcolor" value="#000000"/>
+      
+     
+              <label for="bgcolor">Background Color</label>
+              <span><input type="color" id="bgcolor" value="#FFFFFF"/></span>
+              </div>
+              
+              <div class="input-group mb-3">
+                <span class="input-group-text" id="basic-addon1">Format</span>
+                <select name="Format" id="format" class="format-wrapper">
+                  <option value="jpg">JPG</option>
+                  <option value="png">PNG</option>
+                  <option value="svg">SVG</option> 
+                </select>
+              </div>
+          
+              <div>
+                <button onclick="generateQr()">Generate</button>
+                <button onclick="downloadQr()">Download</button>
+              </div>
+
+            <div class="image-wrapper">
+              <img   id="img">
+            </div>     
+        </div>
+      </div>
+    </div>
+  </div>
+  
+  </body>
+</html>
